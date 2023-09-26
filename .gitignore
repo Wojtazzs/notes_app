@@ -1,0 +1,12 @@
+/target
+.env
+Rocket.toml
+.vscode
+*.sql
+migrations
+.DS_Store
+public/img
+*.pem
+configuration
+*.yaml
+*.key

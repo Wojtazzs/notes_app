@@ -1,0 +1,19 @@
+<head>
+  <title>Notes App</title>
+  <link rel="icon" type="image/x-icon" href="static/img/icon.ico" />
+  <script src="static/js/htmx.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+
+<body hx-post="/start" hx-target="#user-interface" hx-swap="innerHTML" hx-trigger="load">
+  <div class="left-side" id="left-main">
+
+    <table id='user-interface' class='smooth'>
+    </table>
+
+  </div>
+  <div class="right-side vlg" id="right-main">
+    <img class="right-side-image" src="static/img/logo.png" />
+  </div>
+</body>

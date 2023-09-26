@@ -1,0 +1,20 @@
+[package]
+name = "notes_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+sqlx = { version = "0.7.1", features = ["mysql", "runtime-tokio-rustls"] }
+dotenv = "0.15.0"
+serde = { version = "1.0.183", features = ["derive"] }
+password-auth = "0.3.0"
+rand = "0.8.5"
+actix-web = { version = "4.3.1", features = ["openssl", "cookies"] }
+serde_json = "1.0.104"
+actix-files = "0.6.2"
+openssl = { version = "0.10.56", features = ["vendored"] }
+env_logger = "0.10.0"
+actix-session = { version = "0.7.2", features = ["cookie-session"] }
+uuid = { version = "1.4.1", features = ["serde", "v4"] }

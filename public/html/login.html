@@ -1,0 +1,25 @@
+<tr>
+  <td colspan='2'>
+    <h1 class='title'>Notes App</h1>
+  </td>
+</tr>
+<tr>
+  <td colspan='2'>
+    <p class='sub-title'>Notes for every platform synced!</p>
+  </td>
+</tr>
+<tr class='row-btn'>
+  <td style='width: 50%;' class='no-padding'><button class='btn vlg rnd-top white-text active-folder'>Login</button>
+  </td>
+  <td style='width: 50%;' class='no-padding'><button class='btn lg rnd-top hover-dg white-text folder'
+      hx-get='/register' hx-target='#user-interface' hx-swap='innerHTML'>Register</button></td>
+</tr>
+<tr>
+  <td colspan='2' class='vlg rnd-bottom'>
+    <form hx-post='/login/user' hx-target='#user-interface' hx-swap='innerHTML'>
+      <input class='rnd m-tp-bt-small' type='text' name='name' placeholder='Username' />
+      <input class='rnd m-tp-bt-small' type='password' name='password' placeholder='Password' />
+      <button class='btn rnd lg m-tp-bt-small hover-dg white-text' value='Login'>Login</button>
+    </form>
+  </td>
+</tr>

@@ -1,0 +1,34 @@
+<tr>
+  <td colspan="2">
+    <h1 class="title">Notes App</h1>
+  </td>
+</tr>
+<tr>
+  <td colspan="2">
+    <p class="sub-title">Notes for every platform synced!</p>
+  </td>
+</tr>
+<tr class="row-btn">
+  <td style="width: 50%;" class="no-padding"><button class='btn lg rnd-top hover-dg white-text folder' hx-get="/login"
+      hx-target="#user-interface" hx-swap="innerHTML">Login</button></td>
+  <td style="width: 50%;" class="no-padding"><button class='btn vlg rnd-top white-text active-folder'>Register</button>
+  </td>
+</tr>
+<tr>
+  <td colspan="2" class="vlg rnd-bottom">
+    <form hx-post="/new_user" hx-target="#response" hx-swap="innerHTML">
+      <input class="rnd m-tp-bt-small my-indicator" id="indic2" type="text" name="name" placeholder="Username" hx-post="/name_check" hx-indicator="#indic2" hx-target="#namech" hx-swap="innerHTML">
+      <p id="namech"></p>
+      <input class="rnd m-tp-bt-small my-indicator" id="indic" type="text" name="email" placeholder="Email address"
+        hx-post="/email_check" hx-indicator="#indic" hx-target="#emailch" hx-swap="innerHTML">
+      <p id="emailch"></p>
+      <input class="rnd m-tp-bt-small" type="password" name="password" placeholder="Password" />
+      <label class="container white-text"> I accept the <text class="link-button" hx-get="/register/tos" hx-target="#response" hx-swap="innerHTML" hx-trigger="click"> Terms and Conditions </text>
+        <input type="checkbox" name="policy" value="1" />
+        <span class="checkmark"></span>
+      </label>
+      <button class="btn rnd lg m-tp-bt-small hover-dg white-text">Register</button>
+      <div id="response" hx-target="this"></div>
+    </form>
+  </td>
+</tr>
